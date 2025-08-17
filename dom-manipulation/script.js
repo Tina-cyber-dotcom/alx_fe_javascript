@@ -108,7 +108,7 @@ createAddQuoteForm();
 
 // Load last viewed quote from sessionStorage, else show random
 const lastQuote = JSON.parse(sessionStorage.getItem("lastQuote"));
-if (lastQuote) {
+if (lastQuote)  {
   quoteDisplay.textContent = `"${lastQuote.text}" — (${lastQuote.category})`;
 } else {
   showRandomQuote();
