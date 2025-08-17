@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dynamic Quote Generator</title>
+  <style>
+    /* tiny, optional styles for clarity */
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 24px; line-height: 1.5; }
+    h1 { margin-bottom: 12px; }
+    .row { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; margin-bottom: 16px; }
+    #quoteDisplay { padding: 16px; border: 1px solid #ddd; border-radius: 12px; min-height: 90px; }
+    blockquote { margin: 0; font-size: 1.15rem; }
+    figcaption { opacity: 0.75; font-size: 0.95rem; margin-top: 6px; }
+    button { cursor: pointer; padding: 8px 12px; border-radius: 10px; border: 1px solid #ccc; background: #f7f7f7; }
+    input, select { padding: 8px 10px; border-radius: 10px; border: 1px solid #ccc; min-width: 220px; }
+    .hint { font-size: 0.9rem; opacity: 0.8; }
+    .msg { margin-top: 8px; font-size: 0.95rem; }
+  </style>
+</head>
+<body>
+  <h1>Dynamic Quote Generator</h1>
+
+  <!-- Controls row will be filled by JS (category filter + show button) -->
+  <div id="controls" class="row"></div>
+
+  <!-- Where quotes render -->
+  <div id="quoteDisplay" aria-live="polite"></div>
+
+  <!-- Add-quote form goes here (built via JS for “advanced DOM”) -->
+  <div id="addFormMount" style="margin-top: 18px;"></div>
+
+  <noscript>Please enable JavaScript to use the Dynamic Quote Generator.</noscript>
+
+  <script src="script.js"></script>
+</body>
+</html>
